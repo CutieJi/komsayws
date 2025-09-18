@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EstyudantengKomsay</title>
+    <link rel="icon" type="image/x-icon" href="logor.ico" />
+    <link href="input.css" rel="stylesheet" />
+    <link rel="stylesheet" href="aibot.css">
+    <script src="aibot.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="particles.js"></script>
+    <script type="module" src="particlesjs-config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Micro+5&family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/354d48ccb6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-black" style="font-family: IBM plex mono">
+    <audio id="bg-music" autoplay loop hidden>
+      <source src="bscsmusic.mp3" type="audio/mpeg" />
+    </audio>
+    <script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('bg-music');
+    audio.play().catch(() => {
+      const startAudio = () => {
+        audio.play();
+        document.removeEventListener('click', startAudio);
+        
+      };
+      document.addEventListener('click', startAudio);
+      
+    });
+  });
+    </script>
+    <div id="particles-js" class="-z-0"></div>
+    <header
+      class="text-white bg-none body-font top-0 left-0 right-0 fixed bg-black bg-opacity-20 backdrop-blur-md z-40 border-b-[0.5px] hidden md:block"
+    >
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <img class="w-10" src="ucc.png" alt="Logo"/><img class="w-10" src="logow.png" alt="Logo" /><a
+          href="#home"
+          class="flex title-font font-medium items-center mb-4 md:mb-0"
+          ><p class="ml-3 text-xl text-red-200">EstyudantengKomsay</p></a
+        >
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center font-semibold glow"
+        >
+          <a
+            href="#quotes"
+            class="mr-5 hover:text-red-200 hover:text-[17px] hover:duration-200 transition-all"
+            >Quotes</a
+          ><a
+            href="#goals"
+            class="mr-5 hover:text-red-200 hover:duration-200 hover:text-[17px] transition-all;"
+            >Goals</a
+          >
+          <a
+            href="#officials"
+            class="mr-5 hover:text-red-200 hover:duration-200 hover:text-[17px] transition-all;"
+            >Officers</a
+          >
+          <a
+            href="#contact"
+            class="mr-5 hover:text-red-200 hover:duration-200 hover:text-[17px] transition-all"
+            >Contact</a
+          >
+          
+        </nav>
+        <button
+          class="inline-flex items-center font-semibold bg-red-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-red-100 glow rounded text-base mt-4 md:mt-0 transition-colors duration-500 -z-1"
+        >
+          <a href="https://facebook.com/ucckomsay/" target="_blank"
+            >Follow us!</a
+          >
+        </button>
+      </div>
+    </header>
+    <div
+      class="fixed bottom-0 z-20 w-full flex items-center justify-center pb-4 md:hidden"
+    >
+      <a href="https://facebook.com/ucckomsay/" target="_blank"
+        ><button
+          class="inline-flex items-center font-semibold bg-red-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-red-100 glow rounded text-base mt-4 md:mt-0 transition-colors duration-500 -z-1 bg-opacity-50"
+        >
+          Follow us! 
+        </button></a
+      >
+    </div>
+    <section class="text-gray-300 body-font" id="home">
+      <div
+        class="container mx-auto flex px-5 py-10 items-center justify-center flex-col lg:mt-10"
+      >
+        <img
+          class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded -z-10"
+          id="float"
+          alt="hero"
+          src="logor.png"
+        />
+        <div class="text-center lg:w-2/3 w-full">
+          <br />
+          <h1
+            class="glow title-font sm:text-4xl text-3xl mb-4 font-bold text-red-200"
+          >
+            Estudyanteng<br />KOMSAY
+          </h1>
+          <br />
+          <p class="leading-relaxed mb-8 sm:text-xl text-sm white-glow">
+            Welcome to the official website of Estudyanteng Komsay! We are a
+            vibrant community of students dedicated to fostering academic
+            excellence, personal growth, and meaningful connections. Our mission is
+            to provide a supportive environment where students can thrive both
+            academically and socially. Through various events, workshops, and
+            initiatives, we aim to empower our members to reach their full
+            potential. Join us as we embark on a journey of learning, collaboration,
+            and fun! Together, we can create a memorable and enriching experience for all
+            members of Estudyanteng Komsay.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="text-gray-300 body-font" id="quotes">
+      <div
+        class="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
+      >
+        <div class="text-center lg:w-2/3 w-full">
+          <br />
+          <h1
+            class="glow title-font sm:text-4xl text-3xl font-bold text-red-200"
+          >
+            Weekly Quotes
+          </h1>
+          <br />
+          <p class="leading-relaxed mb-8 sm:text-xl text-sm white-glow">
+            Welcome to the Weekly Quotes section! Here, we share inspiring and
+            thought-provoking quotes to uplift your spirits and motivate you
+            throughout the week. Whether you're seeking wisdom, encouragement,
+            or a fresh perspective, our curated collection of quotes is designed
+            to resonate with you. Take a moment to reflect on these words of
+            wisdom and let them inspire you to embrace challenges, pursue your
+            dreams, and make a positive impact in your life and the lives of
+            others. Stay tuned for new quotes every week and let the power of
+            words guide you on your journey!
+          </p>
+            
+
+            <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="lg:w-2/3 mx-auto">
+          <div class="px-2">
+            <div
+              class="flex flex-wrap w-full bg-red-800 py-24 px-10 relative mb-4 rounded-xl hover:scale-95 transition-all duration-300 bg-opacity-30 backdrop-blur-md"
+            >
+              
+              <div class="text-center relative z-10 w-full">
+                <h2 class="text-2xl text-white font-medium title-font mb-2">
+                  Weekly Quotes
+                </h2>
+                <p class="leading-relaxed">
+                  <br>
+                  Love is when the other person's happiness is <br>
+                  more important than your own.
+                  <br>
+                  <br>
+                  -Rosh
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="text-gray-300 body-font white-glow" id="apply">
+      <center>
+      <h1
+            class="glow title-font sm:text-4xl text-3xl font-bold text-red-200"
+          >
+            Do you want to follow us?, <br> and be updated to our announcements?
+          </h1>
+        </center>
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="lg:w-2/3 mx-auto">
+          <div class="px-2">
+            <div
+              class="flex flex-wrap w-full bg-gray-800 py-24 px-10 relative mb-4 rounded-xl hover:scale-95 transition-all duration-300"
+            >
+              <img
+                alt="gallery"
+                class="w-full rounded-xl object-cover h-full object-center block opacity-50 absolute inset-0 brightness-50"
+                src="fbbb.png"
+              />
+              <div class="text-center relative z-10 w-full">
+                <h2 class="text-2xl text-white font-medium title-font mb-2">
+                  Facebook Page
+                </h2>
+                <p class="leading-relaxed">
+                  Stay connected with us on our official Facebook page! By following
+                  us, you'll be the first to know about our latest news, events, and
+                  announcements. Join our vibrant community of students and engage
+                  with like-minded individuals who share your interests and passions.
+                  Don't miss out on exciting updates, inspiring stories, and valuable
+                  resources that can enhance your academic journey. Click the link
+                  below to visit our Facebook page and hit the "Like" button to stay
+                  updated with all things Estudyanteng Komsay!
+                </p>
+                <a href='https://facebook.com/ucckomsay/' class="mt-3 text-red-200 inline-flex items-center glow Register"
+                  >View<svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  ><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="px-2">
+            <div
+              class="flex flex-wrap w-full bg-gray-800 py-24 px-10 relative mb-4 rounded-xl hover:scale-95 transition-all duration-300"
+            >
+              <img
+                alt="gallery"
+                class="w-full rounded-xl object-cover h-full object-center block opacity-50 absolute inset-0 brightness-50"
+                src=".png"
+              />
+              <div class="text-center relative z-10 w-full">
+                <h2 class="text-2xl text-white font-medium title-font mb-2">
+                  Instagram Page (Under Develop)
+                </h2>
+                <p class="leading-relaxed">
+                  Follow us on Instagram to stay updated with our latest news,
+                  events, and announcements! Our Instagram page is the perfect
+                  platform to connect with our vibrant community of students and
+                  share your experiences. By following us, you'll gain access to
+                  exclusive content, behind-the-scenes glimpses, and inspiring
+                  stories that showcase the spirit of EstudyantengKomsay. Don't miss
+                  out on exciting updates and opportunities to engage with like-minded
+                  individuals. Click the link below to visit our Instagram page and hit
+                  the "Follow" button to stay connected with all things EstudyantengKomsay!
+                </p>
+                <a href='#' class="mt-3 text-red-200 inline-flex items-center glow Register"
+                  >View<svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  ><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="px-2">
+            <div
+              class="flex flex-wrap w-full bg-gray-800 py-24 px-10 relative mb-4 rounded-xl hover:scale-95 transition-all duration-300"
+            >
+              <img
+                alt="gallery"
+                class="w-full rounded-xl object-cover h-full object-center block opacity-50 absolute inset-0 brightness-50"
+                src=".png"
+              />
+              <div class="text-center relative z-10 w-full">
+                <h2 class="text-2xl text-white font-medium title-font mb-2">
+                  TikTok Account (Under Develop)
+                </h2>
+                <p class="leading-relaxed">
+                  Follow us on TikTok to stay updated with our latest news,
+                  events, and announcements! Our TikTok account is the perfect
+                  platform to connect with our vibrant community of students and
+                  share your experiences. By following us, you'll gain access to
+                  exclusive content, behind-the-scenes glimpses, and inspiring
+                  stories that showcase the spirit of EstudyantengKomsay. Don't miss
+                  out on exciting updates and opportunities to engage with like-minded
+                  individuals. Click the link below to visit our TikTok page and hit
+                  the "Follow" button to stay connected with all things EstudyantengKomsay!
+                </p>
+                <a href='#' class="mt-3 text-red-200 inline-flex items-center glow Register"
+                  >View<svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  ><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+              </div>
+            </div>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-gray-300 body-font" id="goals">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+          <br />
+          <h1
+            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-red-200"
+            style="font-family: Pixelify Sans"
+          >
+            BSCS1A' Goals
+          </h1>
+          <br /><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="inline-block w-8 h-8 text-white-400 mb-8"
+            viewBox="0 0 975.036 975.036"
+          >
+            <path
+              d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+            ></path>
+          </svg>
+          <p class="leading-relaxed mb-8 sm:text-xl text-sm white-glow">
+            At BSCS 1A, our primary goal is to create a supportive and inclusive
+            learning environment that fosters academic excellence and personal
+            growth. We aim to equip our students with the knowledge and skills
+            necessary to excel in the field of computer science. Through engaging
+            coursework, hands-on projects, and collaborative learning experiences,
+            we strive to inspire creativity, critical thinking, and problem-solving
+            abilities. Additionally, we are committed to promoting teamwork,
+            communication, and ethical practices among our students. By nurturing a
+            passion for technology and innovation, we prepare our students to become
+            future leaders in the ever-evolving world of computer science.
+          </p>
+        
+          <span
+            class="inline-block h-1 w-10 rounded bg-red-500 mt-8 mb-6"
+          ></span>
+          <h2 
+            class="text-gray-500 font-medium title-font tracking-wider text-sm"
+          >
+          
+            CS:G • @1A
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="text-gray-300 body-font" id="officials">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+          <br />
+          <h1
+            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-red-200"
+            style="font-family: Pixelify Sans"
+          >
+            BSCS1A' Management Personnel
+          </h1>
+         
+          <br /><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="inline-block w-8 h-8 text-white-400 mb-8"
+            viewBox="0 0 975.036 975.036"
+          >
+            <path
+              d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+            ></path>
+          </svg>
+          
+          <p class="leading-relaxed mb-8 sm:text-xl text-sm white-glow">
+            The Management Personnel of BSCS 1A are dedicated individuals who play a crucial role in
+            ensuring the smooth operation and success of our section. Comprising a team of
+            passionate and committed members, our management personnel are responsible for
+            overseeing various aspects of our community, including event planning, communication,
+            and student support. They work tirelessly to create a positive and inclusive environment
+            where all members can thrive academically and personally. Through their leadership and
+            organizational skills, our management personnel help to foster a sense of unity and
+            collaboration among our students. They are always available to assist with any concerns
+            or questions, ensuring that everyone feels heard and valued. The dedication and hard work
+            of our management personnel are instrumental in shaping the overall experience of BSCS 1A,
+            making it a vibrant and dynamic community for all members.
+          <div class="rulebookbtn">
+            <a href="#"> <!-- download -->
+        <button
+          class="inline-flex items-center bg-red-500 font-semibold text-white py-1 px-5 rounded-2xl bg-opacity-100 backdrop-blur-md glow"
+        >
+          PDF Personnel's List (Under Develop)
+        </button></a
+      >
+          </div>
+         
+         <br>
+          <span
+            class="inline-block h-1 w-10 rounded bg-red-500 mt-8 mb-6"
+          ></span>
+          <br>
+          
+          <h2
+            class="text-gray-500 font-medium title-font tracking-wider text-sm"
+          >
+
+            CS:PL 2025 • @1A
+          </h2>
+          
+        </div>
+      </div>
+     
+          
+    </section>
+    <div class="chat-bubble">
+        <button onclick="toggleChat()" class="bg-red-700 text-white rounded-full p-3 shadow-lg hover:bg-red-500 transition w-12 h-12 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0.0.0.0" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+            </svg>
+            <span>
+              <img src="">
+            </span>
+        </button>
+    </div>
+
+    <div id="chatOverlay" class="chat-overlay">
+        <div class="chat-header">
+            <h3 class="text-lg font-semibold">Chat with Me</h3>
+            <button onclick="toggleChat()" class="text-white hover:text-gray-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="chatBody" class="chat-body">
+            <div class="chat-message ai">Hi, I'm Rosh's AIBot, what do you want to know about me?</div>
+        </div>
+        <div class="chat-input">
+            <input id="chatInput" type="text" placeholder="Type your message..." onkeypress="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <footer class="container px-5 py-24 mx-auto" id="contact">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a class="flex items-center flex-wrap gap-2"
+              ><img src="ucc.png" class="h-8 me-3" alt="" /><img src="logow.png" class="h-8 me-3" alt="" /><span
+                class="self-center text-xs font-semibold whitespace-nowrap text-white lg:text-2xl"
+                >BSCS1A</span
+              ></a
+            >
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div class="z-10">
+              <h2 class="mb-6 text-sm font-semibold text-red-200 uppercase">
+                Contact
+              </h2>
+              <ul class="text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://www.facebook.com/deftonesenjoyerx1002/"
+                    class="hover:text-red-800 hover:text-[16.35px] transition-all duration-200 glow"
+                    >Manager | Felisilda</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="https://www.facebook.com/Lynnnlynn28/"
+                    class="hover:text-red-800 hover:text-[16.35px] transition-all duration-200 glow"
+                    >Supervisor | Punay</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="https://www.facebook.com/roshuaz.xo/"
+                    class="hover:text-red-800 hover:text-[16.35px] transition-all duration-200 glow"
+                    >OIC - H.Admin | Ingel</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="z-10">
+              <h2 class="mb-6 text-sm font-semibold uppercase text-red-200">
+                Follow us
+              </h2>
+              <ul class="text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://facebook.com/ucckomsay/"
+                    target="_blank"
+                    class="hover:underline"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:estyudantengkomsay@gmail.com"
+                    target="_blank"
+                    class="hover:underline"
+                    >Email</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="z-10">
+              <h2 class="mb-6 text-sm font-semibold text-red-200 uppercase">
+                Legal
+              </h2>
+              <ul class="text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="/BSCS1A-PrivacyPolicy.pdf" download class="hover:underline" target="_blank"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="BSCS1A-Terms&Conditions.pdf" download class="hover:underline" target="_blank"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <span
+          class="inline-block h-[1px] w-20 rounded bg-red-500 mt-8 mb-6"
+        ></span>
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm sm:text-center text-gray-400"
+            >© 2025 <a href="" class="hover:underline">Rosh</a>. All
+            Rights Reserved.</span
+          >
+        </div>
+        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+        <div class="flex justify-between">
+          <h2
+            class="text-xs text-gray-400 hover:text-red-800 hover:scale-105 transition-all duration-150 z-10 glow"
+          >
+            Maintained By
+          </h2>
+          <div class="flex gap-3 z-10">
+            <a
+              href="https://github.com/CutieJi/"
+              target="_blank"
+              class="text-xs text-gray-400 hover:text-violet-300 hover:scale-105 text-glow transition-all duration-300"
+              ><i class="fa-brands fa-github"></i> @RoshIngel</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

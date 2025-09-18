@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#particles-js {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#float {
+  animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #9c59db;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 0, 0.558);
+}
+.body {
+  scroll-behavior: smooth;
+}
+.text-glow:hover {
+  text-shadow: 0 0 7px #b0b0b0, 0 0 15px rgb(255, 0, 0),
+    0 0 25px rgb(201, 9, 9);
+}
+.glow {
+  text-shadow: 0 0 3px #DE2500, 0 0 15px rgb(141, 9, 9),
+    0 0 25px rgb(255, 0, 0);
+}
+.white-glow {
+  text-shadow: 0 0 2px rgb(255, 255, 255), 0 0 50px rgba(255, 0, 0, 0.7),
+    0 0 20px hsl(0, 93%, 73%);
+}
+
+.Register{
+  border-bottom: 2px solid #DE2500;
+
+/*rulebook button fix*/ 
+.rulebookbtn{
+    position: relative;
+    z-index: 39; /* setting z value higher than Particle.js */
+}
+}
