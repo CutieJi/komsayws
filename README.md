@@ -1,2 +1,1 @@
-[# komsayws
-](https://bskomsay.netlify.app/)
+[CLick to View Website](https://bskomsay.netlify.app/)
